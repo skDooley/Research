@@ -1,0 +1,128 @@
+alias la="ls -lah"
+alias lac="clear;ls -lah" 
+alias srcbash="source ~/.bash_profile"
+alias mybash="vim ~/.bash_profile"
+alias anl4="ssh -X anl4"
+alias anl5="ssh -X anl5"
+alias new="ls -alht|head -n 15"
+
+# added by Anaconda2 5.0.0 installer
+export PATH="/Library/Frameworks/R.framework/Resources/bin:$PATH"
+export PATH="/Users/shanedooley/anaconda2/bin:$PATH"
+export PATH="$PATH:/Users/shanedooley/Documents/Classes/MacroEvolution/RevBayes"
+export PATH="$PATH:/Users/shanedooley/Documents/Classes/MacroEvolution/RevBayes/scripts/"
+export RSTUDIO_WHICH_R="/Users/shanedooley/anaconda2/bin/R"
+
+# Programs
+alias jup="jupyter notebook &"
+alias fk="kill -9"
+alias sub="/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text"
+
+# Directory Paths
+alias ml="cd /Users/shanedooley/Documents/Classes/MachineLearning"
+
+# SSH
+alias msu="ssh dooleys1@hpcc.msu.edu"
+alias msuj="ssh -t dooleys1@hpcc.msu.edu \"ssh dev-intel14-k20\""
+alias jupm="ssh -t -L 8890:localhost:7000 dooleys1@hpcc.msu.edu \"ssh -L 7000:localhost:8890 dev-intel14-k20\""
+alias jupm1="ssh -t -L 8891:localhost:7000 dooleys1@hpcc.msu.edu \"ssh -L 7000:localhost:8891 dev-intel14-k20\""
+alias cons="ps -ef |grep ssh"
+
+# Functions
+alias sq="ps -ef | grep -iv -E \"Chrome|System|libexec|Dropbox|Slack|sbin\""
+
+hist()
+{
+  history|grep $1
+}
+
+cd_func ()
+{
+  local x2 the_new_dir adir index
+  local -i cnt
+
+  if [[ $1 ==  "--" ]]; then
+    dirs -v
+    return 0
+  fi
+
+  the_new_dir=$1
+  [[ -z $1 ]] && the_new_dir=$HOME
+
+  if [[ ${the_new_dir:0:1} == '-' ]]; then
+    #
+    # Extract dir N from dirs
+    index=${the_new_dir:1}
+    [[ -z $index ]] && index=1
+    adir=$(dirs +$index)
+    [[ -z $adir ]] && return 1
+    the_new_dir=$adir
+  fi
+
+  #
+  # '~' has to be substituted by ${HOME}
+  [[ ${the_new_dir:0:1} == '~' ]] && the_new_dir="${HOME}${the_new_dir:1}"
+
+  #
+  # Now change to the new dir and add to the top of the stack
+  pushd "${the_new_dir}" > /dev/null
+  [[ $? -ne 0 ]] && return 1
+  the_new_dir=$(pwd)
+
+  #
+  # Trim down everything beyond 11th entry
+  popd -n +11 2>/dev/null 1>/dev/null
+
+  #
+  # Remove any other occurence of this dir, skipping the top of the stack
+  for ((cnt=1; cnt <= 10; cnt++)); do
+    x2=$(dirs +${cnt} 2>/dev/null)
+    [[ $? -ne 0 ]] && return 0
+    [[ ${x2:0:1} == '~' ]] && x2="${HOME}${x2:1}"
+    if [[ "${x2}" == "${the_new_dir}" ]]; then
+      popd -n +$cnt 2>/dev/null 1>/dev/null
+      cnt=cnt-1
+    fi
+  done
+
+  return 0
+}
+
+alias cd=cd_func
+
+function extract {
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+    echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
+ else
+    for n in $@
+    do
+      if [ -f "$n" ] ; then
+          case "${n%,}" in
+            *.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
+                         tar xvf "$n"       ;;
+            *.lzma)      unlzma ./"$n"      ;;
+            *.bz2)       bunzip2 ./"$n"     ;;
+            *.rar)       unrar x -ad ./"$n" ;;
+            *.gz)        gunzip ./"$n"      ;;
+            *.zip)       unzip ./"$n"       ;;
+            *.z)         uncompress ./"$n"  ;;
+            *.7z|*.arj|*.cab|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.rpm|*.udf|*.wim|*.xar)
+                         7z x ./"$n"        ;;
+            *.xz)        unxz ./"$n"        ;;
+            *.exe)       cabextract ./"$n"  ;;
+            *)
+                         echo "extract: '$n' - unknown archive method"
+                         return 1
+                         ;;
+          esac
+      else
+          echo "'$n' - file does not exist"
+          return 1
+      fi
+    done
+fi
+}
+
+
