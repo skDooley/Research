@@ -22,7 +22,7 @@ If your laptop runs MacOSX or Linux:
 1. Download & Install [Cyberduck](https://cyberduck.io/)
 2. Download & Install a text editor (you can use the built in editor but we recommend either [Sublime](https://www.sublimetext.com/) or [TextWrangler](https://itunes.apple.com/us/app/textwrangler/id404010395?mt=12))
 
-
+####
 # Fundamentals
 ## What is "shell"?
 
@@ -69,8 +69,6 @@ things are different. I recommend sticking with bash and learning it well.
 To open a terminal, just single click on the "Terminal" icon on the
 Desktop.
 
-# The Command Line
-
 | Term | Definition | Example |
 |:-:|:-:|:-:|
 |  program | the name (case sensitive) of the program  | echo |
@@ -79,12 +77,15 @@ Desktop.
 
 ![CMD LINE](images/cmdLine.png)
 
-# Basic essential programs
+Now let's try it! Open a terminal and type
 
-To help us get started, we are going to download a bunch of files for the sake of this tutorial. We will talk more about this command later but for now copy and paste or type the command below exactly. This will download all of the files used in this tutorial from my public repository on github
+    echo hello world
+
+and press enter. Congratulations, you just ran your first of millions of commands on the command line!!! Now, to help us get started, we are going to download a bunch of files for the sake of this tutorial. We will talk more about this command later but for now copy and paste or type the command below exactly. This will download all of the files used in this tutorial from my public repository on github
 
     git clone https://github.com/skDooley/Research/tutorials/shell
 
+# Basic essential programs
 ### Navigation
 
 Let's learn how to move around the file system using command line
@@ -104,12 +105,12 @@ directory called the *home* directory. Every user has their own home
 directory where they have full access to do whatever they want.
 
 | Program | Description | Example |
+|:-:|:-:|:-:|
 | pwd | **p**rint **w**orking **d**irectory | pwd |
-| ls | list the files in the working directory | ls 
-or you could do ls -l to see details about the files|
+| ls | list the files in the working directory | ls |
 | cd | **c**hange **d**irectory | cd shell |
 
-
+####
 
 
 
@@ -125,23 +126,7 @@ to you. The echo command is useful for printing from a shell script,
 for displaying variables, and for generating known values to pass
 to other programs.
 
-## Moving around the file system
 
-Let's learn how to move around the file system using command line
-programs. This is really easy to do using a GUI (just click on
-things). Once you learn the basic commands, you'll see that it is
-really easy to do in the shell too.
-
-First we have to know where we are. The program `pwd` (print working
-directory) tells you where you are sitting in the directory tree. The
-command `ls` will list the files in files in the current
-directory. Directories are often called "folders" because of how they
-are represented in GUIs. Directories are just listings of files. They
-can contain other files or directories.
-
-Whenever you start up a terminal, you will start in a special
-directory called the *home* directory. Every user has their own home
-directory where they have full access to do whatever they want.
 
 **File Types**
 
