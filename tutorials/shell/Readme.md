@@ -30,8 +30,8 @@ If your laptop runs MacOSX or Linux:
 
 The **shell** is a program that allows users to talk to the operating system
 of a computer or group of cumputers (cluster) by typing in recognized commands (**command line interface**)
-to run programs instead of controlling what the computer does using a *g*raphical 
-*u*ser *i*nterface (GUI) with a mouse/keyboard combination.
+to run programs instead of controlling what the computer does using a **g**raphical 
+**u**ser **i**nterface (GUI) with a mouse/keyboard combination.
 
 Use a browser to open the tutorial on github, located at:
 
@@ -58,7 +58,7 @@ most important reasons are that:
 
 The shell is just a program and there are many different shell
 programs that have been developed. The most common shell (and the one
-we will use) is called the *B*ourne-*A*gain *SH*ell (bash). Many commands, 
+we will use) is called the **B**ourne-**A**gain **SH**ell (bash). Many commands, 
 especially a lot of the basic ones, work across the various shells but many
 things are different. I recommend sticking with bash and learning it well.
 
@@ -71,7 +71,7 @@ Desktop.
 
 # The Command Line
 
-|  Term | Definition  | Example |
+| Term | Definition | Example |
 |:-:|:-:|:-:|
 |  program | the name (case sensitive) of the program  | echo |
 |  arguement | additional information you give the program to get it to do what you want it to do.  | echo hello world |
@@ -81,24 +81,37 @@ Desktop.
 
 # Basic essential programs
 
-
-
-
-
-
-# The Example: Manipulating Experimental Data Files
-
-We will spend most of our time learning about the basics of the shell by manipulating some experimental data from a hearing test. To get
-the data for this test, you will need internet access. Just enter the
-command:
+To help us get started, we are going to download a bunch of files for the sake of this tutorial. We will talk more about this command later but for now copy and paste or type the command below exactly. This will download all of the files used in this tutorial from my public repository on github
 
     git clone https://github.com/skDooley/Research/tutorials/shell
 
-Followed by:
+### Navigation
 
-    cd shell
+Let's learn how to move around the file system using command line
+programs. This is really easy to do using a GUI (just click on
+things). Once you learn the basic commands, you'll see that it is
+really easy to do in the shell too.
 
-This command downloads all the data that will be needed for this tutorial.  
+First we have to know where we are. The program `pwd` (print working
+directory) tells you where you are sitting in the directory tree. The
+command `ls` will list the files in files in the current
+directory. Directories are often called "folders" because of how they
+are represented in GUIs. Directories are just listings of files. They
+can contain other files or directories.
+
+Whenever you start up a terminal, you will start in a special
+directory called the *home* directory. Every user has their own home
+directory where they have full access to do whatever they want.
+
+| Program | Description | Example |
+| pwd | **p**rint **w**orking **d**irectory | pwd |
+| ls | list the files in the working directory | ls 
+or you could do ls -l to see details about the files|
+| cd | **c**hange **d**irectory | cd shell |
+
+
+
+
 
 # Let's get started
 
