@@ -1,8 +1,10 @@
 #The Shell
 
 **Original Material by Milad Fatenejad, Sasha Wood, and Radhika Khetani**
-
 **Modified by Jared Flater and Adina Howe**
+**Remodified by Shane K. Dooley**
+
+
 
 ### Exercise solutions have been posted as an ipython notebook.
 
@@ -57,11 +59,11 @@ We will spend most of our time learning about the basics of the shell by manipul
 the data for this test, you will need internet access. Just enter the
 command:
 
-    git clone https://github.com/germs-lab/softwarecarpentry
+    git clone https://github.com/skDooley/Research/tutorials/shell
 
 Followed by:
 
-    cd softwarecarpentry/day1.shell/
+    cd shell
 
 This command downloads all the data that will be needed for this tutorial.  
 
