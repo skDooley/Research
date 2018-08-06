@@ -35,7 +35,7 @@ to run programs instead of controlling what the computer does using a **g**raphi
 
 Use a browser to open the tutorial on github, located at:
 
-    https://github.com/skDooley/Research/edit/master/tutorials/shell/
+    ![https://github.com/skDooley/Research/tree/master/tutorials/shell](https://github.com/skDooley/Research/tree/master/tutorials/shell)
 
 A **terminal** is a program you run that gives you access to the
 shell. There are many different terminal programs that vary across
