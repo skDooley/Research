@@ -85,7 +85,7 @@ and press enter. Congratulations, you just ran your first of millions of command
 
     git clone https://github.com/skDooley/Research/tutorials/shell
 
-# Basic essential programs
+# Basics of essential programs
 ### Navigation
 
 Let's learn how to move around the file system using command line
@@ -110,8 +110,15 @@ directory where they have full access to do whatever they want.
 | ls | list the files in the working directory | ls |
 | cd | **c**hange **d**irectory | cd shell |
 
-####
+### File Manipulation
 
+blah
+
+### Saving time with shortcuts, wild cards, and tab completion
+
+blah blah
+
+####
 
 
 # Let's get started
