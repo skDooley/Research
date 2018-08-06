@@ -1,17 +1,11 @@
-#The Shell
+# The Shell
+
 ![the Shell](images/MatrixBash.jpg)
 
 **Original Material by Milad Fatenejad, Sasha Wood, and Radhika Khetani**
 **Modified by Jared Flater and Adina Howe**
 
 **Remodified by Shane K. Dooley**
-
-
-
-### Exercise solutions have been posted as an ipython notebook.
-
-You can view [solutions here](https://nbviewer.jupyter.org/github/germs-lab/softwarecarpentry/blob/master/day1.shell/exercise_solutions.ipynb)
-
 
 # Getting Started
 
@@ -76,6 +70,20 @@ To open a terminal, just single click on the "Terminal" icon on the
 Desktop.
 
 # The Command Line
+
+|  Term | Definition  | Example |
+|:-:|:-:|:-:|
+|  program | the name (case sensitive) of the program  | echo |
+|  arguement | additional information you give the program to get it to do what you want it to do.  | echo hello world |
+|  flag | a special kind of arguement that is proceeded by either 1 or 2 -'s  | ls -l / or just ls -l|
+
+![CMD LINE](images/cmdLine.png)
+
+# Basic essential programs
+
+
+
+
 
 
 # The Example: Manipulating Experimental Data Files
@@ -864,6 +872,9 @@ search for files which do not match a certain name.
 
 * * * *
 
+### Exercise solutions have been posted as an ipython notebook.
+
+You can view [solutions here](https://nbviewer.jupyter.org/github/germs-lab/softwarecarpentry/blob/master/day1.shell/exercise_solutions.ipynb)
 
 
 ## Bonus:
