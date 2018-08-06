@@ -1,23 +1,18 @@
-#The Shell
+# The Shell
+
+![the Shell](images/MatrixBash.jpg)
 
 **Original Material by Milad Fatenejad, Sasha Wood, and Radhika Khetani**
 **Modified by Jared Flater and Adina Howe**
 
 **Remodified by Shane K. Dooley**
 
-
-
-### Exercise solutions have been posted as an ipython notebook.
-
-You can view [solutions here](https://nbviewer.jupyter.org/github/germs-lab/softwarecarpentry/blob/master/day1.shell/exercise_solutions.ipynb)
-
-
 # Getting Started
 
 In order to prepare for this tutorial please do the following **before** class:
 
 If your laptop runs Windows:
-1. Download & Install [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+1. Download the [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) excecutable
 ![puttydownload](https://github.com/skDooley/Research/blob/master/tutorials/shell/images/putty.png)
 
 2. Download & Install [WinSCP](https://winscp.net/eng/download.php)
@@ -25,28 +20,28 @@ If your laptop runs Windows:
 
 If your laptop runs MacOSX or Linux:
 1. Download & Install [Cyberduck](https://cyberduck.io/)
-2. Download & Install [Sublime](https://www.sublimetext.com/) or [TextWrangler](https://itunes.apple.com/us/app/textwrangler/id404010395?mt=12)
+2. Download & Install a text editor (you can use the built in editor but we recommend either [Sublime](https://www.sublimetext.com/) or [TextWrangler](https://itunes.apple.com/us/app/textwrangler/id404010395?mt=12))
 
 
 # Fundamentals
 ## What is "shell"?
 
-![Drag Racing](Dragster.jpg)
+![shell diagram](images/shell-ref.png)
 
-The *shell* is a program that presents a command line interface
-which allows you to control your computer using commands entered
-with a keyboard instead of controlling *g*raphical *u*ser *i*nterfaces
-(GUIs) with a mouse/keyboard combination.
+The **shell** is a program that allows users to talk to the operating system
+of a computer or group of cumputers (cluster) by typing in recognized commands (**command line interface**)
+to run programs instead of controlling what the computer does using a **g**raphical 
+**u**ser **i**nterface (GUI) with a mouse/keyboard combination.
 
 Use a browser to open the tutorial on github, located at:
 
-    https://github.com/germs-lab/softwarecarpentry
+    https://github.com/skDooley/Research/edit/master/tutorials/shell/
 
-Click on the directory named `day1.shell`.
-
-A *terminal* is a program you run that gives you access to the
+A **terminal** is a program you run that gives you access to the
 shell. There are many different terminal programs that vary across
-operating systems.
+operating systems. Today, if you are using Windows you will use the Putty terminal
+and if you are using a Mac or have Linux running on your laptop, you will be using
+the well named program Terminal as your terminal.
 
 There are many reasons to learn about the shell. In our opinion, the
 most important reasons are that:
@@ -63,30 +58,60 @@ most important reasons are that:
 
 The shell is just a program and there are many different shell
 programs that have been developed. The most common shell (and the one
-we will use) is called the Bourne-Again SHell (bash). Even if bash is
-not the default shell, it is usually installed on most systems and can be
-started by typing `bash` in the terminal. Many commands, especially a
-lot of the basic ones, work across the various shells but many things
-are different. I recommend sticking with bash and learning it well.
+we will use) is called the **B**ourne-**A**gain **SH**ell (bash). Many commands, 
+especially a lot of the basic ones, work across the various shells but many
+things are different. I recommend sticking with bash and learning it well.
+
+![the Shell](images/bourneAgainShell.jpg)
 
 [Here is a link for more information](http://en.wikipedia.org/wiki/Bash_Unix_shell)
 
 To open a terminal, just single click on the "Terminal" icon on the
 Desktop.
 
-# The Example: Manipulating Experimental Data Files
+# The Command Line
 
-We will spend most of our time learning about the basics of the shell by manipulating some experimental data from a hearing test. To get
-the data for this test, you will need internet access. Just enter the
-command:
+| Term | Definition | Example |
+|:-:|:-:|:-:|
+|  program | the name (case sensitive) of the program  | echo |
+|  arguement | additional information you give the program to get it to do what you want it to do.  | echo hello world |
+|  flag | a special kind of arguement that is proceeded by either 1 or 2 -'s  | ls -l / or just ls -l|
+
+![CMD LINE](images/cmdLine.png)
+
+# Basic essential programs
+
+To help us get started, we are going to download a bunch of files for the sake of this tutorial. We will talk more about this command later but for now copy and paste or type the command below exactly. This will download all of the files used in this tutorial from my public repository on github
 
     git clone https://github.com/skDooley/Research/tutorials/shell
 
-Followed by:
+### Navigation
 
-    cd shell
+Let's learn how to move around the file system using command line
+programs. This is really easy to do using a GUI (just click on
+things). Once you learn the basic commands, you'll see that it is
+really easy to do in the shell too.
 
-This command downloads all the data that will be needed for this tutorial.  
+First we have to know where we are. The program `pwd` (print working
+directory) tells you where you are sitting in the directory tree. The
+command `ls` will list the files in files in the current
+directory. Directories are often called "folders" because of how they
+are represented in GUIs. Directories are just listings of files. They
+can contain other files or directories.
+
+Whenever you start up a terminal, you will start in a special
+directory called the *home* directory. Every user has their own home
+directory where they have full access to do whatever they want.
+
+| Program | Description | Example |
+| pwd | **p**rint **w**orking **d**irectory | pwd |
+| ls | list the files in the working directory | ls 
+or you could do ls -l to see details about the files|
+| cd | **c**hange **d**irectory | cd shell |
+
+
+
+
 
 # Let's get started
 
@@ -860,6 +885,9 @@ search for files which do not match a certain name.
 
 * * * *
 
+### Exercise solutions have been posted as an ipython notebook.
+
+You can view [solutions here](https://nbviewer.jupyter.org/github/germs-lab/softwarecarpentry/blob/master/day1.shell/exercise_solutions.ipynb)
 
 
 ## Bonus:
