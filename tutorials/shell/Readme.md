@@ -18,7 +18,7 @@ In order to prepare for this tutorial please do the following **before** class:
 
 If your laptop runs Windows:
 1. Download & Install [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-![puttydownload](images/putty.png)
+![puttydownload](https://github.com/skDooley/Research/blob/master/tutorials/shell/images/putty.png)
 
 2. Download & Install [WinSCP](https://winscp.net/eng/download.php)
 3. Download & Install [Notepad++](https://notepad-plus-plus.org/download/)
