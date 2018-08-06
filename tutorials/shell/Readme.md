@@ -1,18 +1,41 @@
 #The Shell
 
 **Original Material by Milad Fatenejad, Sasha Wood, and Radhika Khetani**
-
 **Modified by Jared Flater and Adina Howe**
+
+**Remodified by Shane K. Dooley**
+
+
 
 ### Exercise solutions have been posted as an ipython notebook.
 
 You can view [solutions here](https://nbviewer.jupyter.org/github/germs-lab/softwarecarpentry/blob/master/day1.shell/exercise_solutions.ipynb)
 
-# What is the shell how do I access the shell?
+
+# Getting Started
+
+In order to prepare for this tutorial please do the following **before** class:
+
+If your laptop runs Windows:
+1. Download & Install [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+![puttydownload](https://github.com/skDooley/Research/blob/master/tutorials/shell/images/putty.png)
+
+2. Download & Install [WinSCP](https://winscp.net/eng/download.php)
+3. Download & Install [Notepad++](https://notepad-plus-plus.org/download/)
+
+If your laptop runs MacOSX or Linux:
+1. Download & Install [Cyberduck](https://cyberduck.io/)
+2. Download & Install [Sublime](https://www.sublimetext.com/) or [TextWrangler](https://itunes.apple.com/us/app/textwrangler/id404010395?mt=12)
+
+
+# Fundamentals
+## What is "shell"?
+
+![Drag Racing](Dragster.jpg)
 
 The *shell* is a program that presents a command line interface
 which allows you to control your computer using commands entered
-with a keyboard instead of controlling graphical user interfaces
+with a keyboard instead of controlling *g*raphical *u*ser *i*nterfaces
 (GUIs) with a mouse/keyboard combination.
 
 Use a browser to open the tutorial on github, located at:
@@ -57,11 +80,11 @@ We will spend most of our time learning about the basics of the shell by manipul
 the data for this test, you will need internet access. Just enter the
 command:
 
-    git clone https://github.com/germs-lab/softwarecarpentry
+    git clone https://github.com/skDooley/Research/tutorials/shell
 
 Followed by:
 
-    cd softwarecarpentry/day1.shell/
+    cd shell
 
 This command downloads all the data that will be needed for this tutorial.  
 
